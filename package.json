@@ -1,7 +1,7 @@
 {
-  "name": "vrguest",
+  "name": "react-starter-kit",
   "version": "1.0.0",
-  "description": "rental vacations portal",
+  "description": "React Stater kit with RxJS, Webpack 2, React Router v4 and Babel",
   "main": "app.js",
   "scripts": {
     "start": "npm-run-all --parallel dev lint:watch",
