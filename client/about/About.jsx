@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
 
 class AboutPage extends PureComponent {
   constructor() {
     super();
-  };
+  }
 
   render() {
     const {count} = this.props;
@@ -17,5 +18,9 @@ class AboutPage extends PureComponent {
     );
   }
 }
+
+AboutPage.propTypes = {
+  count: PropTypes.number.isRequired,
+};
 
 export default AboutPage;
