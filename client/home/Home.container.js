@@ -1,14 +1,16 @@
 import {connect} from 'react-redux';
 
 import Home from './Home.jsx';
-import {incrementCounter} from './home.action';
+import {incrementCounter, getData} from './home.action';
 
 const mapStateToProps = state => ({
-  count: state.counter.count
+  count: state.counter.count,
+  users: state.counter.users
 });
 
 const mapDispatchToProps = dispatch => ({
   incrementCounter: () => dispatch(incrementCounter()),
+  getData: () => dispatch(getData()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

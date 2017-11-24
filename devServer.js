@@ -19,7 +19,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use('/v1/*', proxy({
     target: config.api,
-    pathRewrite: {'^/v1/': ''}
+    pathRewrite: {'^/v1/': '/'}
 }));
 app.use(express.static(path.join(__dirname + "/client/theme-assets/")));
 app.use(require('webpack-hot-middleware')(compiler));

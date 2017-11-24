@@ -1,5 +1,9 @@
 import {combineEpics} from 'redux-observable';
 
-const epics = combineEpics();
+import {homeEpics} from './home/home.epic';
+
+const epics = combineEpics(
+  homeEpics
+);
 
 export default epics;
