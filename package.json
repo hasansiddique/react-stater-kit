@@ -7,12 +7,14 @@
     "start": "npm-run-all --parallel dev lint:watch",
     "dev": "babel-node devServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* devServer.js config.js client",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "mockserver": "json-server --watch mock-server/db.json --port 5001"
   },
   "author": "Hasan Siddique",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "http-proxy-middleware": "^0.17.4",
     "jquery": "^3.2.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
